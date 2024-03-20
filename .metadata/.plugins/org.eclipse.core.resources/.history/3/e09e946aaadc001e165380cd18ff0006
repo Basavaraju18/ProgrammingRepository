@@ -1,0 +1,28 @@
+package com.uday;
+
+
+class Father {
+	 private void work() {
+
+		 System.out.println("Fatherr is working");
+	}
+}
+
+class Son extends Father{
+	private void play() {
+
+		System.out.println("Son is playing");
+	}
+}
+
+public class DownCasting {
+	
+	public static void main(String[] args) {
+		
+		
+		Father f = new Son();
+		
+		Son s = (Son)f;
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.jsp;
+
+
+public class String {
+	
+	@Override
+	public String toString() {
+		return "Bas18";
+	}
+	
+	public static void main(String[] args) {
+		
+		String s1 = new String("ArunKumar");
+		System.out.println(s1.toString());
+	}
+
+}

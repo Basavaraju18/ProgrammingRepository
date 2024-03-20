@@ -1,0 +1,14 @@
+package com.jsp.filehandling;
+
+import java.util.Scanner;
+
+public class Serialization {
+	
+	public static void main(String[] args) throws Exception {
+		
+		Scanner ip=new Scanner(System.in);
+		System.out.println("Entr the id and percentage: ");
+		
+	}
+
+}

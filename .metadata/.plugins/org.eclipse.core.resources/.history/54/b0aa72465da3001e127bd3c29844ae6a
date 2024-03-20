@@ -1,0 +1,60 @@
+package com.Integer;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class DigitCount {
+	
+	private static void countNumbers() {
+		int n=12345;
+		int count=0;
+		while(n>0)
+		{
+			
+			count++;
+			n=n/10;
+//			n=n%10;
+		}
+		
+		System.out.println(count);
+	}
+	
+	
+	private static void reverseNumbers() {
+
+		int n=12345;
+		int rev=0;
+		
+		while(n>0)
+		{
+			int l=n%10;
+			rev=(rev*10)+l;
+			n/=10;
+		}
+		System.out.println(rev);
+	}
+	
+	private static void countUniqueDigits() 
+	{
+		int n=1236323893;
+		Set<Integer> s1 = new TreeSet<>();
+		while(n>0)
+		{
+			int last=n%10;
+			s1.add(last);
+			n/=10;
+		}
+		
+//		System.out.println(s1);
+		for(int i : s1) {
+			System.out.print(i+" ");
+		}
+	}
+	
+	public static void main(String[] args) {
+//		countNumbers();
+//		reverseNumbers();
+		countUniqueDigits();
+	}
+
+}

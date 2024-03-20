@@ -1,0 +1,27 @@
+package com.bs18;
+
+public class A {
+
+	
+	 
+	private static void printingNumbers(int end) {
+		 int start = 0;
+		System.out.println(start);
+		if(start <= end) {
+			start++;
+			
+		}
+		
+
+		printingNumbers(end);
+	}
+
+
+	public static void main(String[] args) {
+
+		int end =10;
+		printingNumbers(end);
+
+	}
+
+}

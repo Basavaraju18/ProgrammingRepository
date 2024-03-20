@@ -1,0 +1,36 @@
+package com.program50;
+
+import java.util.Scanner;
+
+public class CountnNumber {
+	
+	
+	public static void usingForLoop() {
+		int  count= 0;
+		for (int num=1234; num>0;  num=num/10 ) {
+			count++;
+			
+		}
+		System.out.println(count++);
+	}
+	
+	public static void usingWhileLoop() {
+		Scanner ip =new Scanner(System.in);
+		System.out.println("Enter the number");
+		int number=ip.nextInt();
+		int count = 0;
+		while(number>0) {
+			count++;
+			number=number/10;
+			
+		}
+		System.out.println("The Total digits in the number is  "+count++);
+	}
+	
+	public static void main(String[] args) {
+//		usingForLoop();
+		usingWhileLoop();
+		
+	}
+
+}

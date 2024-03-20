@@ -1,0 +1,21 @@
+package com.string;
+
+// Replace the vowels in the String with a
+final class VowelsReplacement {
+
+    public static void main(String[] args) {
+        String s1 = "Hi Hello bye";
+        StringBuilder modifiedString = new StringBuilder();
+        
+        for (int i = 0; i < s1.length(); i++) {
+            char currentChar = s1.charAt(i);
+            if (currentChar == 'a' || currentChar == 'e' || currentChar == 'i' || currentChar == 'o' || currentChar == 'u') {
+                modifiedString.append('a');
+            } else {
+                modifiedString.append(currentChar);
+            }
+        }
+
+        System.out.println(modifiedString);
+    }
+}

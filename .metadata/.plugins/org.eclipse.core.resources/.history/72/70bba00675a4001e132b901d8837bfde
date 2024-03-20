@@ -1,0 +1,36 @@
+package com.Integer;
+
+public class ReturningDigits {
+	
+	private static int lastDigit(int ip1) {
+		
+		if(ip1<0)
+			ip1=(-1)*ip1;
+		int c=0;
+		
+		int i=Integer.toString(ip1).length();
+			int r=0;
+			if(i==1)
+				return -1;
+			
+			else 
+			{
+				while(ip1 >0)
+				{
+					r=ip1%10;
+					
+					c++;
+					ip1/=10;
+					if(c==2)
+						break;
+				}
+				return r;
+			}
+	
+}
+	public static void main(String[] args) {
+		
+		lastDigit(1234);
+	} 
+
+}

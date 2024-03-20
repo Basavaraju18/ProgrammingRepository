@@ -1,0 +1,9 @@
+package com.jsp.filehandling;
+
+public class Student  {
+
+	public Student(int id, String name, double per) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

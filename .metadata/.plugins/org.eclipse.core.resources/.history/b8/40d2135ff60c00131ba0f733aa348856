@@ -1,0 +1,71 @@
+package com.darshan;
+
+import java.util.Scanner;
+
+public class ConsonantsIntheString {
+
+
+	private static void method1() {
+		Scanner ip= new Scanner(System.in);
+		System.out.println("Enteer the String");
+		String s1=ip.nextLine();
+		char[] c=s1.toCharArray();
+
+		int count=0;
+		for (int i = 0; i < c.length; i++) {
+			count=1;
+
+			for (int j = i+1; j < c.length; j++) 
+			{
+				if(c[i]==c[j])
+				{
+					count++;
+					c[j]=' ';
+				}
+			}
+			if(c[i]!=' ' && c[i] !='a' && c[i] !='e' && c[i] !='i' && c[i]!='o' && c[i]!='u')
+				System.out.println(c[i]+" -> "+count);}}
+
+	private static void method2() {
+		String s1="welocme to java class";
+		char[] c=s1.toCharArray(); 
+		int count=0;
+		for (int i = 0; i < c.length; i++) {
+			count=1;
+			for (int j = i+1; j < c.length; j++) 
+			{
+				if(c[i]==c[j]) 
+				{
+					count++;
+					c[j]=' ';
+				}
+			}
+			if(c[i]!=' ');
+			System.out.println(c[i]+" --> "+count);
+		}
+
+	}
+	public static void main(String[] args) {
+		method1();
+		System.out.println("========");
+		method2();
+	}
+
+}
+
+
+//int count=0;
+//
+//for (int i = 0; i < c.length; i++) {
+//	count=1;
+//
+//	for (int j = i+1; j < c.length; j++) {
+//		if(c[i]==c[j])
+//		{
+//			count++;
+//			c[j]=' ';
+//		}
+//	}
+//	if(c[i]!=' ' && c[i]!='a' && c[i]!='e' && c[i]!='i' && c[i]!='o' && c[i]!='u');
+//	System.out.println(c[i]+ " --> "+ count);
+//}

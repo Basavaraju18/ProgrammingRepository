@@ -1,0 +1,20 @@
+package com.Integer;
+
+public class SumofDigits {
+	
+	private void sumOfLastDigitsOgTwoNumbers() {
+	
+		int n=123432;
+		int sum=0;
+		
+		for (int i = n; i>0; n/=10) {
+			System.out.println(i);
+		}
+
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+
+}

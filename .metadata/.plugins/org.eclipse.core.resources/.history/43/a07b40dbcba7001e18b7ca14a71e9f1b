@@ -1,0 +1,62 @@
+package com.hackerrank;
+
+public class DiagonalElementsSum {
+
+	public static void main(String[] args) {
+
+		int[][] matrix= {
+
+				{1, 2, 3},
+				{2, 1, 3},
+				{2, 1, 3}
+
+		};
+
+		// Display the original matrix
+		System.out.println("Original matrix: ");
+		displayMatrix(matrix);
+
+		// Calculate and display the sum of both diagonals
+
+		int mainDiagonalSum = calculateMainDiagonalSum(matrix);
+		int antiDiagonalSum = calculateAntiDiagonalSum(matrix);
+
+		System.out.println("Sum of the main diagonal elements: " + mainDiagonalSum);
+		System.out.println("Sum of the main diagonal elements: " + antiDiagonalSum);
+	}
+
+	private static void displayMatrix(int[][] matrix) {
+
+		for(int i = 0; i < matrix.length; i++) {
+
+			for(int j = 0; j < matrix.length; j++) {
+				System.out.println(matrix[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+
+	private static int calculateAntiDiagonalSum(int[][] matrix) {
+
+		int sum = 0;
+
+		for(int i =0; i <matrix.length; i++) {
+			sum += matrix[i][matrix.length - 1 - i]; // Adding the anti diagonal elements
+		}
+
+		return 0;
+	}
+
+	private static int calculateMainDiagonalSum(int[][] matrix) {
+
+		int sum = 0;
+
+		for (int i = 0; i < matrix.length; i++) 
+		{
+			sum += matrix[i][i];
+		}
+
+		return sum;
+	}
+
+}

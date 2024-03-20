@@ -1,0 +1,44 @@
+package com.array;
+
+import java.util.Scanner;
+
+public class DeleteArray {
+
+	private static int[] methodSample(int pos, int[] arr1) {
+		int[] arr2=new int[arr1.length];
+		//		System.out.println(arr1.length);
+		if(pos>arr1.length) {
+			return null;
+		}
+		else{
+			for (int i = 0; i < arr1.length; i++) {
+				if(arr1[i] != pos) {
+					
+//					System.out.print(arr1[i]+" ");
+					arr2[i]=arr1[i];
+					
+					
+				}
+			}
+		}
+		return arr2;
+	}
+
+	public static void main(String[] args) {
+
+		Scanner ip = new Scanner(System.in);
+		System.out.println("Enterr the size of the array");
+		int size=ip.nextInt();
+		int[] arr = new int[size];
+
+		System.out.println("Enter array elements");
+		for(int i=0; i<arr.length; i++) {
+			arr[i]=ip.nextInt();
+		}
+		System.out.println("Enter the position of the number you want to delete");
+		int pos1=ip.nextInt();
+		int[] md=methodSample(pos1, arr);
+		System.out.println(md.toString());
+	}
+
+}

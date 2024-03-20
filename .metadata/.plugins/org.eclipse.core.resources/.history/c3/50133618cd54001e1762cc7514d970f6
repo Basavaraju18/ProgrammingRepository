@@ -1,0 +1,18 @@
+package com.bas.newInstanceMethod;
+
+public class NewInstanceMethodMainClass {
+	
+	public static void main(String[] args) {
+		
+		
+		try {
+			Dinga d1=(Dinga) Class.forName("com.bas.newInstanceMethod.Dinga").newInstance();
+			System.out.println(d1);
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

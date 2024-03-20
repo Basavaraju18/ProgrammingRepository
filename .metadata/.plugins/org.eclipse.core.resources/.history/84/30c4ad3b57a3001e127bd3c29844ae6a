@@ -1,0 +1,39 @@
+package com.Integer;
+
+public class DigitCount {
+	
+	private static void countNumbers() {
+		int n=12345;
+		int count=0;
+		while(n>0)
+		{
+			
+			count++;
+			n=n/10;
+//			n=n%10;
+		}
+		
+		System.out.println(count);
+	}
+	
+	
+	private static void reverseNumbers() {
+
+		int n=54321;
+		int rev=0;
+		
+		while(n>0)
+		{
+			int l=n%10;
+			rev=(rev*10)+l;
+			n/=10;
+		}
+		System.out.println(rev);
+	}
+	
+	public static void main(String[] args) {
+//		countNumbers();
+		reverseNumbers();
+	}
+
+}

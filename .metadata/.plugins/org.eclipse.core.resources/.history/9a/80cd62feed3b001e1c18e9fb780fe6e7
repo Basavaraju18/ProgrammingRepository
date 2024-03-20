@@ -1,0 +1,46 @@
+package com.bs18;
+
+public class RemovingSpaceString {
+	
+	
+	public static void darshan() {
+		String s="Hello     hii     bye ok";
+		String s2="";
+		for(int i=0; i<s.length(); i++) {
+			char c=s.charAt(i);
+			if(s.charAt(i)==' ' && s.charAt(i+1)==' ') {
+				continue;
+			}
+			s2=s2+s.charAt(i);
+		}
+		System.out.println(s2);
+	}
+	
+	
+	public static void chatGpt() {
+	    String s = "Hello  hi   bye"; // Example input string with multiple spaces
+	    String s2 = ""; // String to store the modified output
+
+	    for (int i = 0; i < s.length(); i++) {
+	        char c = s.charAt(i);
+
+	        // Check if the current character is a space and if the previous character was also a space.
+	        if (c == ' ' && (i == 0 || s.charAt(i - 1) == ' ')) {
+	            continue; // Skip this space character
+	        }
+
+	        // If the current character is not a space, or it's a space with a non-space character before it,
+	        // add the character to the modified output string.
+	        s2 = s2 + c;
+	    }
+
+	    // Print the modified output string with consecutive spaces removed.
+	    System.out.println(s2);
+	}
+
+	public static void main(String[] args) {
+		darshan();
+		chatGpt();
+	}
+
+}

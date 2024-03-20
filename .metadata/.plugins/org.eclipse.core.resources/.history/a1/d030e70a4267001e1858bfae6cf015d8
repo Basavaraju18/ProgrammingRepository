@@ -1,0 +1,22 @@
+package com.bs18;
+
+import java.util.Scanner;
+
+// Array is a collection of elements of same data types stored in contiguous memory allocation  
+public class PerfectNumbrDivisionsSum {
+
+	public static void main(String[] args) {
+
+		Scanner ip = new Scanner(System.in);
+		System.out.println("Enter teh number");
+		int count = 1;
+		int num = ip.nextInt();
+		for(int i=2; i <=num; i++) {
+			if(num%i==0) {
+				count=count+i;
+			}
+		}
+		System.out.println(count);
+	}
+
+}

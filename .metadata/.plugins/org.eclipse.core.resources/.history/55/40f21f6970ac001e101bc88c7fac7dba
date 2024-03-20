@@ -1,0 +1,45 @@
+package com.hackerrank;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class SubStrings {
+
+	private static int sample(String s) {
+
+		int countUnique =  0;
+	    Map<Character,Integer> storingForP = new HashMap<Character,Integer>();
+	    StringBuilder sb = new StringBuilder(s);
+	    StringBuilder p = new StringBuilder();
+	   
+	    p.append(s.charAt(0));
+	    
+	    storingForP.put(p.charAt(0),1);
+	    
+	    for(int i = 1; i<s.length(); i++)
+	    {
+	       p.append(sb.charAt(i));
+	       
+	       if( !storingForP.containsKey(p.charAt(p.length()-1)) )
+	       {
+	           countUnique++;
+	           storingForP.put(p.charAt(p.length()-1),1);
+	       }
+	    }
+	         return countUnique+1;
+	    
+
+	}
+	public static void main(String[] args) {
+		
+		String s1 = "gbcebabbfffcdgfeeaadecaeecabbabbgcafeabgecfeffcbafgdegdacefcadabbfdcgcebegbfgeeebfegfacdagbbgeagaaceefcaedceacceebdgebeecedc"
+				+ "bdbeebecgcfcgdaaaegfbcbfffccffabbceafaagdedadbfcaedaffbaggebfedegfabefafefgdbafedbggabccaedabfgfgggbcfgeggdcdfeebaedaaccefgeg"
+				+ "bffaaggdcbbbfdbgaaffbbgcfafccdgcaabccbfbgbabegddagcgfbcdfdaccegbabfedbbdaddebddgegedgaabebfeeggddagaeececcafdgddceddcbdagaecce"
+				+ "acgfabgccecgecgcefaafcaedfccdeeceffefadeffefggaeggbbfgcacgfaeefbfbccggcbcgeagcaacdcbegcdaacdgbebdaabddeagafbfagfebfefffcbcgef"
+				+ "bcfeggafccabfagegccefe";
+		int sample = sample(s1);
+		System.out.println(sample);
+		
+	}
+
+}

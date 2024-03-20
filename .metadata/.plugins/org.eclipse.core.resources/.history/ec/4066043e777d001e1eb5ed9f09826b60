@@ -1,0 +1,93 @@
+package com.array;
+
+final class ArrayAcendingDecendingOrder {
+	
+	public void decendOrderOfArray() {
+		int[] arr= {200, 18, 100, 300, 600, 900, 400};
+		
+		for(int i=0; i<arr.length; i++) {
+			
+			for(int j=i+1; j<arr.length; j++) {
+				if(arr[j]>arr[i]) {
+				int	temp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+				}
+			}
+		}
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
+
+	private static void ascendOrderArray() {
+		int[] arr= {200, 100, 300, 600, 900, 400};
+		
+		for(int i=0; i<arr.length; i++) {
+			
+			for(int j=i+1; j<arr.length; j++) {
+				if(arr[i]>arr[j]) {
+				int temp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+				}
+			}
+		}
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
+	
+	private void arraySwapping() {
+	    int[] arr = {0, 0, 0, 1, 0, 2, 3};
+	   
+	    int nonZeroIndex = arr.length - 1;
+
+	    for (int i = arr.length - 1; i >= 0; i--) {
+	        if (arr[i] != 0) {
+	            int temp = arr[i];
+	            arr[i] = arr[nonZeroIndex];
+	            arr[nonZeroIndex] = temp;
+	            nonZeroIndex--;
+	        }
+	    }
+
+	    for (int j = 0; j < arr.length; j++) {
+	        System.out.print(arr[j] + " ");
+	    }
+	}
+
+		public static void main(String[] args) {
+			ArrayAcendingDecendingOrder a1 = new ArrayAcendingDecendingOrder();
+//			System.out.println("===========");
+//			ascendOrderArray();
+			a1.arraySwapping();
+			
+	}
+}
+
+
+
+
+
+
+
+
+//for(int i=0; i<arr.length; i++) {
+//	
+//	for(int  j=i+1; j <arr.length; j++) {
+//		if(arr[i]>arr[j]) {
+//			int temp=arr[i];
+//			arr[i]=arr[j];
+//			arr[j]=temp;
+//		}
+//	}
+//	
+//}
+//for(int i=0; i<arr.length; i++) {
+//	System.out.println(arr[i]);
+//} 

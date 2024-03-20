@@ -1,0 +1,31 @@
+package com.hackerrank;
+
+public class AAAAaaaaaaa implements Comparable<AAAAaaaaaaa>{
+
+	String name;
+	int age;
+
+	public AAAAaaaaaaa(String name, int age) {
+		this.name = name;
+		this.age = age;
+
+	}
+	@Override
+	public String toString() {
+		return name+" and "+age;
+	}
+	
+	public int compareTo(AAAAaaaaaaa o) {
+		return o.name.compareTo(this.name);
+	}
+
+	public static void main(String[] args) {
+
+		AAAAaaaaaaa s1 = new AAAAaaaaaaa("Varun", 22);
+		AAAAaaaaaaa s1 = new AAAAaaaaaaa("Arun", 23);
+		AAAAaaaaaaa s2 = new AAAAaaaaaaa("Kiran", 22);
+	}
+
+
+}
+
